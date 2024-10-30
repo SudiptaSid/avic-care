@@ -1,0 +1,72 @@
+// Contact Home
+.homeContact {
+  padding: 80px 0;
+  background-size: cover;
+  background-position: right top;
+
+  @include md {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    margin-bottom: 48px;
+
+    @include md {
+      margin-bottom: 32px;
+    }
+  }
+
+  .bgBox {
+    padding: 48px;
+    border-radius: 10px;
+    background-color: $whiteClr;
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// Contact One
+.contactOne {
+  padding: 80px 0;
+
+  @include md {
+    padding: 60px 0;
+  }
+}
+
+// Contact Two
+.contactTwo {
+  padding-bottom: 80px;
+
+  @include md {
+    padding-bottom: 60px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 48px;
+
+    @include md {
+      margin-bottom: 32px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 350px;
+  }
+}
+
+// Contact Three
+.contactThree {
+  padding-bottom: 80px;
+
+  @include md {
+    padding-bottom: 60px;
+  }
+}

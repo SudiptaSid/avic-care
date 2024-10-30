@@ -1,0 +1,57 @@
+// Accordian Item
+.accordion-item {
+  border: none;
+  background-color: transparent;
+
+  .accordion-header {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 3;
+
+    .accordion-button {
+      color: $textClr;
+      font-weight: 600;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      padding-left: 36px;
+      transition: 0.5s ease-in;
+
+      &:before {
+        content: "";
+        background-image: url("../images/icons/heart.svg");
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &.collapsed {
+        background-color: transparent;
+      }
+
+      &:not(.collapsed) {
+        background-color: transparent;
+        box-shadow: none;
+
+        &:before {
+          background-image: url("../images/icons/heart-pulse.svg");
+        }
+      }
+    }
+  }
+
+  .accordion-body {
+    padding-left: 36px;
+  }
+}

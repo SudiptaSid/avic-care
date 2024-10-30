@@ -1,0 +1,15 @@
+// One
+.serviceOne {
+  padding-bottom: 80px;
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  @include md {
+    padding-bottom: 60px;
+  }
+
+  .serviceCardOne {
+    height: 100%;
+  }
+}

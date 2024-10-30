@@ -1,0 +1,134 @@
+// One
+.heroBannerOne {
+  .heroHomeSlider {
+    .heroItem {
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      padding: 250px 0;
+      position: relative;
+      z-index: 4;
+
+      @include md {
+        padding: 100px 0;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba($blackClr, 0.2);
+        z-index: -1;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include md {
+          max-width: 230px;
+        }
+
+        h1 {
+          font-size: 70px;
+          font-weight: 700;
+          line-height: 1;
+          text-transform: capitalize;
+          margin-bottom: 0;
+          color: $secondaryClr;
+          background: -webkit-linear-gradient(lighten($secondaryClr, 20%), $secondaryClr);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          @include md {
+            font-size: 36px;
+          }
+
+          small {
+            font-size: 50%;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
+            display: block;
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+
+      @include md {
+        display: none;
+      }
+
+      button {
+        @include iconBox;
+        width: 48px;
+        height: 48px;
+        font-size: 1.4em;
+        color: $primaryLightClr;
+        background-color: $textClr;
+        border-radius: 50%;
+        position: absolute;
+
+        &:hover {
+          color: $whiteClr;
+          background-color: $secondaryClr;
+        }
+
+        &.owl-prev {
+          left: 20px;
+        }
+
+        &.owl-next {
+          right: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Inner Page Banner
+.innerBanner {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: $whiteClr;
+  position: relative;
+  z-index: 4;
+
+  @include md {
+    padding: 60px 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($blackClr, 0.8);
+    z-index: -1;
+  }
+
+  .sectionTitle {
+    h2 {
+      color: $whiteClr;
+    }
+
+    p {
+      color: $whiteClr;
+    }
+  }
+}

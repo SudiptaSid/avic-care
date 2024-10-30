@@ -1,0 +1,155 @@
+// Form Control
+.form-group {
+  > label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: $blackClr;
+    margin-bottom: 4px;
+
+    sup {
+      font-size: 1em;
+      top: 0;
+      color: $redClr;
+    }
+  }
+
+  .inputBox {
+    position: relative;
+    border-radius: 4px;
+    z-index: 4;
+
+    .form-control {
+      color: $blackClr;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $primaryClr;
+      border-radius: 0;
+      padding: 15px 0;
+      font-size: 1em;
+      line-height: 1.6;
+      outline: none;
+      transition: var(--transition);
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
+      &:focus {
+        border-color: $primaryClr;
+        box-shadow: none;
+      }
+
+      &:disabled {
+        background-color: $bgTwoClr;
+        cursor: no-drop;
+      }
+
+      &::placeholder {
+        color: $bgOneClr;
+      }
+    }
+
+    em {
+      color: $bgOneClr;
+      position: absolute;
+      top: 50%;
+      z-index: -1;
+      transform: translateY(-50%);
+    }
+
+    &.leftIcon {
+      .form-control {
+        padding-left: 34px;
+      }
+
+      .emLeft {
+        left: 10px;
+      }
+    }
+
+    &.rightIcon {
+      .form-control {
+        padding-right: 34px;
+      }
+
+      .emRight {
+        right: 10px;
+      }
+    }
+  }
+}
+
+// Form Inline
+.form-inline {
+  position: relative;
+
+  .inputBox {
+    &.leftIcon {
+      .emLeft {
+        left: 20px;
+      }
+
+      .form-control {
+        padding: 15px 135px 15px 44px;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+// Upload Button
+.customUploader {
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .uploadWrapper {
+    position: relative;
+    display: flex;
+
+    .uploadHidden {
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      left: -9999px;
+    }
+
+    .uploadInput {
+      width: 100%;
+      color: $textClr;
+      padding: 10px 15px;
+      border: none;
+      background-color: $bgThreeClr;
+
+      &:hover,
+      &:focus {
+        background-color: darken($bgThreeClr, 5%);
+        outline: none;
+      }
+    }
+
+    .uploadBtn {
+      cursor: pointer;
+      display: inline-block;
+      color: $whiteClr;
+      font-weight: 700;
+      padding: 10px 15px;
+      border: none;
+      margin-left: -1px;
+      background-color: $secondaryClr;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: darken($secondaryClr, 5%);
+      }
+    }
+  }
+}

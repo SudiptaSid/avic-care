@@ -1,0 +1,212 @@
+.SumoGallery {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 99;
+
+    * {
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    a {
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+    .Sheader {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+
+        a {
+            font-size: 24px;
+            line-height: 1;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    .Sbody {
+        position: absolute;
+        top: 44px;
+        bottom: 75px;
+        left: 0px;
+        right: 0px;
+        transition: all 300ms;
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+
+        a {
+            display: none;
+            left: 0px;
+            opacity: 1;
+            transition: none;
+            -moz-transition: none;
+            -webkit-transition: none;
+
+            &.sel {
+                display: block;
+                background-image: url("../plugins/lightbox/loader.gif");
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: 1;
+            }
+
+            &.anim {
+                transition: all 200ms;
+                -webkit-transition: all 200ms;
+                -moz-transition: all 200ms;
+            }
+
+            &.left {
+                left: -100%;
+                opacity: 0;
+            }
+
+            &.right {
+                left: 100%;
+                opacity: 0;
+            }
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                margin: auto;
+                max-width: 100%;
+                max-height: calc(100% - 100px);
+                -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.5);
+                box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.5);
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .Sfooter {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding: 10px 15px;
+        transition: all 300ms;
+
+        .Sthumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+            position: relative;
+
+            li {
+                a {
+                    display: block;
+                    height: 50px;
+                    width: 60px;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    border-radius: 4px;
+                    background-size: cover;
+                    opacity: 0.5;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid #2f855a;
+                    }
+                }
+
+                &.sel {
+                    a {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .toggle-thumbs {
+            position: absolute;
+            right: 10px;
+            bottom: 70px;
+            z-index: 10;
+            color: #fff;
+            background-color: #2f855a;
+            font-size: 24px;
+            line-height: 1;
+            padding: 0 5px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .Sarrow {
+        position: absolute;
+        font-size: 30px;
+        color: #d8d8d8;
+        opacity: 0.8;
+        text-shadow: -1px 0px 3px rgba(0, 0, 0, 0.86);
+        top: 50%;
+        margin-top: -50px;
+        padding: 10px;
+        z-index: 10;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.l {
+            left: 0px;
+        }
+
+        &.r {
+            right: 0px;
+        }
+
+        &.last-item {
+            opacity: 0.3;
+        }
+    }
+
+    .SimgCount {
+        position: absolute;
+        color: #bebebe;
+        right: 10px;
+        bottom: 95px;
+    }
+
+    &.nothumbs {
+        .Sbody {
+            bottom: 0px;
+        }
+
+        .Sfooter {
+            bottom: -70px;
+        }
+    }
+}

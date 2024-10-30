@@ -1,0 +1,16 @@
+// Gallery One
+.galleryOne {
+  padding-top: 80px;
+
+  @include md {
+    padding-top: 60px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 48px;
+
+    @include md {
+      margin-bottom: 32px;
+    }
+  }
+}

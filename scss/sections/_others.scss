@@ -1,0 +1,20 @@
+// Career One
+.careerOne {
+  padding: 80px 0;
+
+  @include md {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    margin-bottom: 48px;
+
+    @include md {
+      margin-bottom: 32px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+}

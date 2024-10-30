@@ -1,0 +1,51 @@
+// Google Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Font Awesome */
+@import "../vendors/fontawesome/scss/fontawesome";
+@import "../vendors/fontawesome/scss/solid";
+@import "../vendors/fontawesome/scss/brands";
+@import "../vendors/fontawesome/scss/regular";
+
+/* Bootstrap */
+@import "../vendors/bootstrap/scss/bootstrap";
+
+/* Owl Carousel */
+@import "../vendors/owlCarousel/scss/owl.carousel";
+@import "../vendors/owlCarousel/scss/owl.theme.default";
+
+/* Lightbox */
+@import "../vendors/lightbox/gallery";
+
+/* Mixin */
+@import "mixin/color";
+@import "mixin/breakpoint";
+@import "mixin/font";
+@import "mixin/keyframe";
+@import "mixin/others";
+
+/* Base */
+@import "reset";
+
+/* Components */
+@import "components/buttons";
+@import "components/input";
+
+@import "components/loader";
+@import "components/backToTop";
+@import "components/heading";
+@import "components/accordian";
+@import "components/others";
+@import "components/card";
+
+/* Layout */
+@import "layout/header";
+@import "layout/footer";
+
+/* Section */
+@import "sections/heroBanner";
+@import "sections/about";
+@import "sections/gallery";
+@import "sections/service";
+@import "sections/contact";
+@import "sections/others";

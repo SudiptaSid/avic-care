@@ -1,0 +1,35 @@
+// Btn
+.btn {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  padding: 12px 24px;
+  border: 2px solid;
+  border-radius: 0;
+  white-space: nowrap;
+  box-shadow: none;
+  outline: none;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &One {
+    color: $secondaryClr;
+    background-color: $whiteClr;
+    border-color: $secondaryClr;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $whiteClr;
+      background-color: $secondaryClr;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// Footer
+.mainFooter {
+  background-color: $bgTwoClr;
+  background-size: cover;
+  background-position: center bottom;
+  font-size: 1em;
+  text-align: center;
+  padding: 60px 0;
+
+  .logo {
+    a {
+      img {
+        height: 100px;
+      }
+    }
+  }
+
+  .listStyleOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 24px 0;
+
+    li {
+      a {
+        color: $textClr;
+
+        &:hover {
+          color: $primaryClr;
+        }
+      }
+    }
+  }
+
+  .socialOne {
+    @include social;
+    margin-bottom: 15px;
+  }
+}

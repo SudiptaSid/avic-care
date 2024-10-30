@@ -1,0 +1,51 @@
+// Icon Box
+@mixin iconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 1em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0;
+}
+
+// List
+@mixin list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    a {
+      display: block;
+    }
+  }
+}
+
+// Social
+@mixin social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  li {
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      color: $blackClr;
+      border-radius: 4px;
+      font-size: 18px;
+
+      &:hover {
+        color: $primaryClr;
+      }
+    }
+  }
+}

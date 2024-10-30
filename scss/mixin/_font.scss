@@ -1,0 +1,111 @@
+// Fonts
+$bodyFont: "Poppins", sans-serif;
+$titleFont: "Montserrat", sans-serif;
+
+@mixin headingOne {
+  font-size: 60px;
+  letter-spacing: -0.6px;
+
+  @include lg {
+    font-size: 50px;
+  }
+
+  @include md {
+    font-size: 40px;
+  }
+}
+
+@mixin headingTwo {
+  font-size: 50px;
+  letter-spacing: -0.6px;
+
+  @include lg {
+    font-size: 40px;
+  }
+
+  @include md {
+    font-size: 30px;
+  }
+}
+
+@mixin headingThree {
+  font-size: 40px;
+  letter-spacing: -0.6px;
+
+  @include lg {
+    font-size: 34px;
+  }
+
+  @include md {
+    font-size: 28px;
+  }
+}
+
+@mixin headingFour {
+  font-size: 26px;
+  letter-spacing: -0.6px;
+
+  @include lg {
+    font-size: 22px;
+  }
+
+  @include md {
+    font-size: 18px;
+  }
+}
+
+@mixin headingFive {
+  font-size: 20px;
+
+  @include lg {
+    font-size: 18px;
+  }
+}
+
+@mixin headingSix {
+  font-size: 16px;
+
+  @include lg {
+    font-size: 14px;
+  }
+}
+
+@mixin paraXl {
+  font-size: 24px;
+
+  @include lg {
+    font-size: 20px;
+  }
+
+  @include md {
+    font-size: 16px;
+  }
+}
+
+@mixin paraL {
+  font-size: 20px;
+
+  @include lg {
+    font-size: 18px;
+  }
+
+  @include md {
+    font-size: 14px;
+  }
+}
+
+@mixin paraM {
+  font-size: 17px;
+
+  @include md {
+    font-size: 14px;
+  }
+}
+
+@mixin paraS {
+  font-size: 16px;
+
+  @include md {
+    font-size: 14px;
+  }
+}

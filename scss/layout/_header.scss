@@ -1,0 +1,152 @@
+// Topbar
+.topHeader {
+  padding: 15px 0;
+  background-color: $whiteClr;
+
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @include md {
+      font-size: 1.2em;
+    }
+
+    img {
+      height: 80px;
+
+      @include md {
+        height: 60px;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    gap: 32px;
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        height: 32px;
+      }
+
+      &:last-child {
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Main Header
+.mainHeader {
+  background-color: $bgTwoClr;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  z-index: 99;
+
+  .navbar {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+
+    .navbar-brand {
+      line-height: 1;
+      padding: 10px 0;
+
+      img {
+        height: 100px;
+
+        @include md {
+          height: 60px;
+        }
+      }
+    }
+
+    .navbar-toggler {
+      color: $blackClr;
+      font-size: 1.5em;
+      box-shadow: unset;
+      border: none;
+      padding: 0;
+    }
+
+    .navbar-nav {
+      gap: 50px;
+
+      @include md {
+        gap: 0;
+      }
+
+      .nav-item {
+        position: relative;
+
+        .nav-link {
+          font-size: 1.125em;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          position: relative;
+          color: $textClr;
+          text-transform: capitalize;
+          padding: 24px 0;
+
+          &:hover,
+          &.active {
+            color: $primaryClr;
+          }
+
+          @include md {
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+
+    .navbar-collapse {
+      @include md {
+        position: absolute;
+        background-color: $bgTwoClr;
+        width: calc(100% + 30px);
+        left: 0;
+        top: 80px;
+        z-index: 99;
+      }
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $whiteClr;
+    box-shadow: 0 10px 30px 0 rgba($blackClr, 0.09);
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+
+    .navbar {
+      .navbar-brand {
+        img {
+          height: 80px;
+
+          @include md {
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+}
